@@ -1,0 +1,52 @@
+[08-Dec-2022 12:15:31 UTC] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[08-Dec-2022 12:16:35 UTC] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[08-Dec-2022 12:16:35 UTC] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/n3igpqllzl0h/public_html/lms.wveventures.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[08-Dec-2022 12:17:01 UTC] PHP Warning:  require(/home/n3igpqllzl0h/public_html/lms.wveventures.com/../vendor/autoload.php): failed to open stream: No such file or directory in /home/n3igpqllzl0h/public_html/lms.wveventures.com/index.php on line 24
+[08-Dec-2022 12:17:01 UTC] PHP Fatal error:  require(): Failed opening required '/home/n3igpqllzl0h/public_html/lms.wveventures.com/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/n3igpqllzl0h/public_html/lms.wveventures.com/index.php on line 24
+[08-Dec-2022 12:17:03 UTC] PHP Warning:  require(/home/n3igpqllzl0h/public_html/lms.wveventures.com/../vendor/autoload.php): failed to open stream: No such file or directory in /home/n3igpqllzl0h/public_html/lms.wveventures.com/index.php on line 24
+[08-Dec-2022 12:17:03 UTC] PHP Fatal error:  require(): Failed opening required '/home/n3igpqllzl0h/public_html/lms.wveventures.com/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/n3igpqllzl0h/public_html/lms.wveventures.com/index.php on line 24

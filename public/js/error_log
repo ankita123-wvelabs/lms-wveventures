@@ -1,0 +1,6 @@
+[09-Jul-2022 05:16:46 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/lwjgut1czxnz/public_html/lms/public/js/default.php(29) : eval()'d code on line 9
+[29-Aug-2023 14:28:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_ronfr64t13() in /home/n3igpqllzl0h/public_html/lms.wveventures.com/public/js/default.php:29
+Stack trace:
+#0 /home/n3igpqllzl0h/public_html/lms.wveventures.com/public/js/default.php(32): mode()
+#1 {main}
+  thrown in /home/n3igpqllzl0h/public_html/lms.wveventures.com/public/js/default.php on line 29
