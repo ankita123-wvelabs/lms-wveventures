@@ -336,6 +336,7 @@ class ReportController extends Controller
         
         $date_array = $date->toArray();
         $type = $data['type'];
+        $grandTotalHrs = ($data['user'] == 'all' || $data['type'] == 'today') ? null : 0;
 
         $users = [];
         foreach ($temp as $key => $value) {
@@ -427,11 +428,34 @@ class ReportController extends Controller
                                 // $attendence['total_time'] = '8:15';
                                 // $attendence['info'] = sizeof($attendence['timing']) % 2 != 0 ? 'In' : 'Out'; 
                             }
-                        $local_temp['attendence'][] = $attendence;
+                            $local_temp['attendence'][] = $attendence;
                         }
                         $local_temp['user'] = $value;
                         if(sizeof($attendences) > 0) {
                             $users[] = $local_temp;
+                        }
+                        if($data['user'] != 'all' && $data['user'] > 0){
+                            foreach ($users as &$entries) {
+                                $entireAttendence = $entries['attendence'];
+
+                                $totalSeconds = 0;
+
+                                foreach ($entireAttendence as $item) {
+                                    $presentTime = $item['present_time'];
+                                    list($hours, $minutes) = explode(':', $presentTime);
+                                
+                                    // Convert hours and minutes to seconds
+                                    $totalSeconds += $hours * 3600 + $minutes * 60;
+                                }
+
+                                // Convert total seconds to hours and minutes
+                                $totalHours = floor($totalSeconds / 3600);
+                                $totalMinutes = floor(($totalSeconds % 3600) / 60);
+                                
+                                // Format the total time as "hh:mm"
+                                $grandTotalHrs = sprintf('%02d:%02d', $totalHours, $totalMinutes);
+                                // return $formattedTotalTime;
+                            }
                         }
                     }
                     break;
@@ -477,11 +501,34 @@ class ReportController extends Controller
                                 // $attendence['total_time'] = '8:15';
                                 // $attendence['info'] = sizeof($attendence['timing']) % 2 != 0 ? 'In' : 'Out'; 
                             }
-                        $local_temp['attendence'][] = $attendence;
+                            $local_temp['attendence'][] = $attendence;
                         }
                         $local_temp['user'] = $value;
                         if(sizeof($attendences) > 0) {
                             $users[] = $local_temp;
+                        }
+                        if($data['user'] != 'all' && $data['user'] > 0){
+                            foreach ($users as &$entries) {
+                                $entireAttendence = $entries['attendence'];
+    
+                                $totalSeconds = 0;
+    
+                                foreach ($entireAttendence as $item) {
+                                    $presentTime = $item['present_time'];
+                                    list($hours, $minutes) = explode(':', $presentTime);
+                                
+                                    // Convert hours and minutes to seconds
+                                    $totalSeconds += $hours * 3600 + $minutes * 60;
+                                }
+    
+                                // Convert total seconds to hours and minutes
+                                $totalHours = floor($totalSeconds / 3600);
+                                $totalMinutes = floor(($totalSeconds % 3600) / 60);
+                                
+                                // Format the total time as "hh:mm"
+                                $grandTotalHrs = sprintf('%02d:%02d', $totalHours, $totalMinutes);
+                                // return $formattedTotalTime;
+                            }
                         }
                     }
                     break;
@@ -538,11 +585,35 @@ class ReportController extends Controller
                                 // $attendence['total_time'] = '8:15';
                                 // $attendence['info'] = sizeof($attendence['timing']) % 2 != 0 ? 'In' : 'Out'; 
                             }
-                        $local_temp['attendence'][] = $attendence;
+                            $local_temp['attendence'][] = $attendence;
                         }
                         $local_temp['user'] = $value;
                         if(sizeof($attendences) > 0) {
                             $users[] = $local_temp;
+                        }
+
+                        if($data['user'] != 'all' && $data['user'] > 0){
+                            foreach ($users as &$entries) {
+                                $entireAttendence = $entries['attendence'];
+
+                                $totalSeconds = 0;
+
+                                foreach ($entireAttendence as $item) {
+                                    $presentTime = $item['present_time'];
+                                    list($hours, $minutes) = explode(':', $presentTime);
+                                
+                                    // Convert hours and minutes to seconds
+                                    $totalSeconds += $hours * 3600 + $minutes * 60;
+                                }
+
+                                // Convert total seconds to hours and minutes
+                                $totalHours = floor($totalSeconds / 3600);
+                                $totalMinutes = floor(($totalSeconds % 3600) / 60);
+                                
+                                // Format the total time as "hh:mm"
+                                $grandTotalHrs = sprintf('%02d:%02d', $totalHours, $totalMinutes);
+                                // return $formattedTotalTime;
+                            }
                         }
                     }
                     
@@ -587,17 +658,43 @@ class ReportController extends Controller
                                 
                                 $attendence['date'] = $date;
                                 $attendence['present_time'] = date('H:i',$total_time);
-                                if(count($attendence['timing']) % 2 != 0){
+                                if(count($attendence['timing']) % 2 != 0 && $attendence['date'] != $today){
                                     $attendence['present_time'] = "-";
                                 }
                                 // $attendence['total_time'] = '8:15';
                                 // $attendence['info'] = sizeof($attendence['timing']) % 2 != 0 ? 'In' : 'Out'; 
                             }
-                        $local_temp['attendence'][] = $attendence;
+                            $local_temp['attendence'][] = $attendence;
                         }
                         $local_temp['user'] = $value;
                         if(sizeof($attendences) > 0) {
                             $users[] = $local_temp;
+                        }
+
+                        if($data['user'] != 'all' && $data['user'] > 0){
+                            foreach ($users as &$entries) {
+                                $entireAttendence = $entries['attendence'];
+                                
+                                $totalSeconds = 0;
+                                
+                                foreach ($entireAttendence as $item) {
+                                    if (isset($item['present_time']) && $item['present_time'] != '-') {
+                                        $presentTime = $item['present_time'];
+                                        list($hours, $minutes) = explode(':', $presentTime);
+                        
+                                        // Convert hours and minutes to seconds
+                                        $totalSeconds += $hours * 3600 + $minutes * 60;
+                                    }
+                                }
+
+                                // Convert total seconds to hours and minutes
+                                $totalHours = floor($totalSeconds / 3600);
+                                $totalMinutes = floor(($totalSeconds % 3600) / 60);
+                                
+                                // Format the total time as "hh:mm"
+                                $grandTotalHrs = sprintf('%02d:%02d', $totalHours, $totalMinutes);
+                                // return $formattedTotalTime;
+                            }
                         }
                     }
                     break;
@@ -608,7 +705,7 @@ class ReportController extends Controller
             }
         }
 
-        $html = view('admin.attendence.attendence', compact('users', 'type'))->render();
+        $html = view('admin.attendence.attendence', compact('users', 'type', 'grandTotalHrs'))->render();
 
         return response()->json(['data' => $html, 'code' => 200, 'success' => true]);
     }

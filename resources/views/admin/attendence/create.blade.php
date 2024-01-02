@@ -48,7 +48,6 @@
 					{{-- <a href="{{ route('admin.reports.generate') }}" class="form-control btn btn-success">Export PDF</a> --}}
 				</div>
 			</form>
-			<span>10:36</span>
 		</div>
 	</section>
 	<section class="panel attendenceReport">

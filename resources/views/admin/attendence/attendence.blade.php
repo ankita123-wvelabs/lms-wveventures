@@ -3,6 +3,9 @@ $data = \Session::get('report');
 @endphp
 @if(sizeof($users) > 0)
 <div class="panel-body">
+	@if($grandTotalHrs != null)
+		<h2 style="float: right;">Total Hrs : {{ $grandTotalHrs }}</h2>
+	@endif
     <div class="adv-table">
         <table  class="display table table-bordered table-striped" id="dataTable">
 	        <thead>
