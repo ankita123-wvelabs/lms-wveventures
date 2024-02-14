@@ -10,6 +10,7 @@ use App\Models\Leave;
 use App\Models\Holiday;
 use App\Models\LWP;
 use App\Models\FeedBack;
+use Illuminate\Support\Facades\Log;
 
 class ReportController extends Controller
 {
@@ -408,7 +409,7 @@ class ReportController extends Controller
                             $counter = 1;
                             $total_time = 0;
                                 foreach ($attendence['timing'] as $key => $time) {
-                                    
+
                                     if($counter % 2 != 0) {
                                         if(array_key_exists($key + 1, $attendence['timing'])) {
                                             $time = strtotime($attendence['timing'][$key + 1]) - strtotime($attendence['timing'][$key]);
@@ -442,6 +443,9 @@ class ReportController extends Controller
 
                                 foreach ($entireAttendence as $item) {
                                     $presentTime = $item['present_time'];
+                                    if($presentTime == '-') {
+                                        $presentTime = '00:00';
+                                    }
                                     list($hours, $minutes) = explode(':', $presentTime);
                                 
                                     // Convert hours and minutes to seconds
@@ -515,6 +519,9 @@ class ReportController extends Controller
     
                                 foreach ($entireAttendence as $item) {
                                     $presentTime = $item['present_time'];
+                                    if($presentTime == '-') {
+                                        $presentTime = '00:00';
+                                    }
                                     list($hours, $minutes) = explode(':', $presentTime);
                                 
                                     // Convert hours and minutes to seconds
@@ -600,6 +607,9 @@ class ReportController extends Controller
 
                                 foreach ($entireAttendence as $item) {
                                     $presentTime = $item['present_time'];
+                                    if($presentTime == '-') {
+                                        $presentTime = '00:00';
+                                    }
                                     list($hours, $minutes) = explode(':', $presentTime);
                                 
                                     // Convert hours and minutes to seconds
@@ -680,6 +690,9 @@ class ReportController extends Controller
                                 foreach ($entireAttendence as $item) {
                                     if (isset($item['present_time']) && $item['present_time'] != '-') {
                                         $presentTime = $item['present_time'];
+                                        if($presentTime == '-') {
+                                            $presentTime = '00:00';
+                                        }
                                         list($hours, $minutes) = explode(':', $presentTime);
                         
                                         // Convert hours and minutes to seconds
